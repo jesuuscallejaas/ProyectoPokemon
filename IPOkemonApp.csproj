@@ -1,0 +1,114 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <Nullable>enable</Nullable>
+    <UseUwp>true</UseUwp>
+    <Platforms>x86;x64;arm64</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <DefaultLanguage>es-ES</DefaultLanguage>
+    <PublishAot>true</PublishAot>
+    <PublishProfile>win-$(Platform).pubxml</PublishProfile>
+    <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
+    <EnableMsixTooling>true</EnableMsixTooling>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="AssetsJigglypuffVAR\ataque_flojo_efecto1.png" />
+    <None Remove="AssetsJigglypuffVAR\corazon.png" />
+    <None Remove="AssetsJigglypuffVAR\energia.png" />
+    <None Remove="AssetsJigglypuffVAR\escudo.png" />
+    <None Remove="AssetsJigglypuffVAR\fondo.png" />
+    <None Remove="AssetsJigglypuffVAR\gota.png" />
+    <None Remove="AssetsJigglypuffVAR\OjoEspiral.png" />
+    <None Remove="AssetsJigglypuffVAR\OjoEspiral1.png" />
+    <None Remove="AssetsJigglypuffVAR\red-potion.png" />
+    <None Remove="AssetsJigglypuffVAR\yellow-potion.png" />
+    <None Remove="AssetsOddishJCS\bosque.png" />
+    <None Remove="AssetsOddishJCS\corazon.png" />
+    <None Remove="AssetsOddishJCS\corazon1.png" />
+    <None Remove="AssetsOddishJCS\energia.png" />
+    <None Remove="AssetsOddishJCS\energia1.png" />
+    <None Remove="AssetsOddishJCS\escudo1.jpg" />
+    <None Remove="AssetsOddishJCS\red-potion.png" />
+    <None Remove="AssetsOddishJCS\red-potion1.png" />
+    <None Remove="AssetsOddishJCS\yellow-potion.png" />
+    <None Remove="AssetsOddishJCS\yellow-potion1.png" />
+    <None Remove="AssetsRegiceVVG\ataque_grande.png" />
+    <None Remove="AssetsRegiceVVG\cansancio.png" />
+    <None Remove="AssetsRegiceVVG\corazon.png" />
+    <None Remove="AssetsRegiceVVG\energia.png" />
+    <None Remove="AssetsRegiceVVG\hielo.png" />
+    <None Remove="AssetsRegiceVVG\LockScreenLogo.scale-200.png" />
+    <None Remove="AssetsRegiceVVG\pokeball.png" />
+    <None Remove="AssetsRegiceVVG\red-potion.png" />
+    <None Remove="AssetsRegiceVVG\Regice.png" />
+    <None Remove="AssetsRegiceVVG\SplashScreen.scale-200.png" />
+    <None Remove="AssetsRegiceVVG\Square150x150Logo.scale-200.png" />
+    <None Remove="AssetsRegiceVVG\Square44x44Logo.scale-200.png" />
+    <None Remove="AssetsRegiceVVG\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <None Remove="AssetsRegiceVVG\StoreLogo.png" />
+    <None Remove="AssetsRegiceVVG\templo.jpg" />
+    <None Remove="AssetsRegiceVVG\Wide310x150Logo.scale-200.png" />
+    <None Remove="AssetsRegiceVVG\yellow-potion.png" />
+    <None Remove="AssetsRegiceVVG\zzz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AssetsJigglypuffVAR\ataque_flojo_efecto1.png" />
+    <Content Include="AssetsJigglypuffVAR\corazon.png" />
+    <Content Include="AssetsJigglypuffVAR\energia.png" />
+    <Content Include="AssetsJigglypuffVAR\escudo.png" />
+    <Content Include="AssetsJigglypuffVAR\fondo.png" />
+    <Content Include="AssetsJigglypuffVAR\gota.png" />
+    <Content Include="AssetsJigglypuffVAR\OjoEspiral.png" />
+    <Content Include="AssetsJigglypuffVAR\OjoEspiral1.png" />
+    <Content Include="AssetsJigglypuffVAR\red-potion.png" />
+    <Content Include="AssetsJigglypuffVAR\yellow-potion.png" />
+    <Content Include="AssetsOddishJCS\bosque.png" />
+    <Content Include="AssetsOddishJCS\corazon.png" />
+    <Content Include="AssetsOddishJCS\corazon1.png" />
+    <Content Include="AssetsOddishJCS\energia.png" />
+    <Content Include="AssetsOddishJCS\energia1.png" />
+    <Content Include="AssetsOddishJCS\escudo1.jpg" />
+    <Content Include="AssetsOddishJCS\red-potion.png" />
+    <Content Include="AssetsOddishJCS\red-potion1.png" />
+    <Content Include="AssetsOddishJCS\yellow-potion.png" />
+    <Content Include="AssetsOddishJCS\yellow-potion1.png" />
+    <Content Include="AssetsRegiceVVG\ataque_grande.png" />
+    <Content Include="AssetsRegiceVVG\cansancio.png" />
+    <Content Include="AssetsRegiceVVG\corazon.png" />
+    <Content Include="AssetsRegiceVVG\energia.png" />
+    <Content Include="AssetsRegiceVVG\hielo.png" />
+    <Content Include="AssetsRegiceVVG\LockScreenLogo.scale-200.png" />
+    <Content Include="AssetsRegiceVVG\pokeball.png" />
+    <Content Include="AssetsRegiceVVG\red-potion.png" />
+    <Content Include="AssetsRegiceVVG\Regice.png" />
+    <Content Include="AssetsRegiceVVG\SplashScreen.scale-200.png" />
+    <Content Include="AssetsRegiceVVG\Square150x150Logo.scale-200.png" />
+    <Content Include="AssetsRegiceVVG\Square44x44Logo.scale-200.png" />
+    <Content Include="AssetsRegiceVVG\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="AssetsRegiceVVG\StoreLogo.png" />
+    <Content Include="AssetsRegiceVVG\templo.jpg" />
+    <Content Include="AssetsRegiceVVG\Wide310x150Logo.scale-200.png" />
+    <Content Include="AssetsRegiceVVG\yellow-potion.png" />
+    <Content Include="AssetsRegiceVVG\zzz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.14" />
+    <PackageReference Include="Microsoft.UI.Xaml" Version="2.8.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\ataque_flojo_efecto1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\corazon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\fondoinicio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\logo_ipokemon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

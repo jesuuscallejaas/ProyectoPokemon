@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="IPOkemonApp.AcercaDePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPOkemonApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="NormalText">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="10,0,10,20"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TitleText" BasedOn="{StaticResource NormalText}">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="imgFondo" Grid.ColumnSpan="4" Grid.RowSpan="4" Source="/Assets/fondoAcercaDe.png" Stretch="Fill"/>
+        <Image x:Uid="TransPokeAyuda" Source="/Assets/logo_ipokemon.png" Width="500" Height="200" Stretch="Uniform" Margin="29,0,0,0" Grid.ColumnSpan="3" />
+
+        <Border BorderBrush="Gray" BorderThickness="1" Grid.Row="1" Grid.ColumnSpan="3" Padding="10" Margin="10" Background="#CCFFFFFF">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="Manual de Usuario: 'IPOkemon'" Style="{StaticResource TitleText}"/>
+                    <TextBlock Text="¡Te damos la bienvenida a 'IPOkemon'! Con esta guía aprenderás a manejar todas las funcionalidades del juego." Style="{StaticResource NormalText}"/>
+
+                    <TextBlock Text="¿Qué es 'IPOkemon'?" Style="{StaticResource TitleText}"/>
+                    <TextBlock Text="IPOkemon es una aplicación diseñada para los amantes de los Pokémon. Aquí podrás gestionar tu colección, explorar la Pokédex, participar en combates y mucho más. Nuestro objetivo es ofrecerte una experiencia inmersiva y divertida." Style="{StaticResource NormalText}"/>
+
+                    <TextBlock Text="Características principales:" Style="{StaticResource TitleText}"/>
+                    <TextBlock Text="• Colección de Pokémon: Visualiza y organiza tu equipo de Pokémon en cualquier momento." Style="{StaticResource NormalText}"/>
+                    <TextBlock Text="• Pokédex: Explora información detallada sobre todos los Pokémon, incluyendo sus habilidades, tipos y estadísticas." Style="{StaticResource NormalText}"/>
+                    <TextBlock Text="• Combates: Participa en emocionantes combates y demuestra tus habilidades como entrenador." Style="{StaticResource NormalText}"/>
+                    <TextBlock Text="• Personalización: Configura tu experiencia según tus preferencias." Style="{StaticResource NormalText}"/>
+
+                    <TextBlock Text="Instrucciones de uso:" Style="{StaticResource TitleText}"/>
+                    <TextBlock Text="1. Navega por las diferentes secciones utilizando el menú lateral." Style="{StaticResource NormalText}"/>
+                    <TextBlock Text="2. En la sección 'Mis Pokémon', puedes gestionar tu equipo y ver detalles de cada Pokémon." Style="{StaticResource NormalText}"/>
+                    <TextBlock Text="3. En la 'Pokédex', explora información sobre todos los Pokémon disponibles." Style="{StaticResource NormalText}"/>
+                    <TextBlock Text="4. Participa en combates desde la sección 'Combate' y mejora tus habilidades como entrenador." Style="{StaticResource NormalText}"/>
+                    <TextBlock Text="5. Consulta esta sección para obtener más información sobre la aplicación." Style="{StaticResource NormalText}"/>
+
+                    <TextBlock Text="Créditos:" Style="{StaticResource TitleText}"/>
+                    <TextBlock Text="Esta aplicación fue desarrollada por el equipo de IPOkemonApp. Agradecemos a todos los colaboradores y usuarios que han hecho posible este proyecto." Style="{StaticResource NormalText}"/>
+
+                    <TextBlock Text="Contacto:" Style="{StaticResource TitleText}"/>
+                    <TextBlock Text="Si tienes preguntas, sugerencias o problemas, no dudes en contactarnos a través de nuestro correo: soporte@ipokemonapp.com." Style="{StaticResource NormalText}"/>
+                </StackPanel>
+
+            </ScrollViewer>
+
+        </Border>
+
+    </Grid>
+</Page>

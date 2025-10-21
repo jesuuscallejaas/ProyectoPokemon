@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="IPOkemonApp.PokeDexPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPOkemonApp"
+    xmlns:clases="using:ClassLibrary1_Prueba"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Padding="20">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/fondo_pokedex.jpg" Stretch="Fill"/>
+        </Grid.Background>
+
+        <!-- Cabecera fija -->
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Pokédex"
+                       FontSize="32"
+                       FontWeight="Bold"
+                       Margin="0,0,0,10"
+                       HorizontalAlignment="Center"/>
+
+            <AutoSuggestBox x:Name="buscadorPokemon"
+                PlaceholderText="Buscar por nombre o tipo..."
+                TextChanged="buscadorPokemon_TextChanged"
+                Margin="0,0,0,10"/>
+
+        </StackPanel>
+
+        <!-- Contenido con scroll -->
+        <GridView x:Name="listaPokemon"
+          Grid.Row="1"
+          Margin="0"
+          IsItemClickEnabled="True"
+          ItemClick="listaPokemon_ItemClick"
+          SelectionMode="None"
+          ScrollViewer.VerticalScrollBarVisibility="Auto"
+          HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid Orientation="Horizontal"
+                           ItemWidth="220"
+                           ItemHeight="260"
+                           MaximumRowsOrColumns="0" />
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="clases:iPokemon">
+                    <Grid Width="220" Height="260" Background="Transparent">
+                        <Viewbox Stretch="Uniform">
+                            <ContentControl Content="{x:Bind}" />
+                        </Viewbox>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+
+    </Grid>
+</Page>

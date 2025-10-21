@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="IPOkemonApp.CombatePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPOkemonApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Frame x:Name="fmMain" Grid.Row="1" Grid.Column="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Assets/fondo_combate.png" Stretch="Fill"/>
+                </Grid.Background>
+
+                <FlipView x:Name="flipViewIzq" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="2"/>
+
+                <FlipView x:Name="flipViewDer" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="1" Grid.RowSpan="2"/>
+
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="3">
+                    <TextBlock x:Name="txtEstadoCombate" Text="Turno del Jugador" FontSize="24" Margin="0,10"/>
+
+                    <StackPanel x:Name="panelBotones" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                        <Button x:Name="btnAtaqueDebil" Content="Ataque Débil" Click="AtaqueDebil_Click"/>
+                        <Button x:Name="btnAtaqueFuerte" Content="Ataque Fuerte" Click="AtaqueFuerte_Click"/>
+                        <Button x:Name="btnDefender" Content="Defenderse" Click="Defender_Click"/>
+                        <Button x:Name="btnDescansar" Content="Descansar" Click="Descansar_Click"/>
+                    </StackPanel>
+
+                    <Button x:Name="btnRevancha" Content="¡Revancha!" Visibility="Collapsed" Click="BtnRevancha_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="3" Margin="0,20"/>
+
+                </StackPanel>
+            </Grid>
+
+        </Frame>
+        
+
+    </Grid>
+</Page>

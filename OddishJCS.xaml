@@ -1,0 +1,549 @@
+﻿<UserControl
+    x:Class="IPOkemonApp.OddishJCS"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPOkemonApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+		<Storyboard x:Key="DerrotadoStoryboard">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="Opacity">
+				<EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+				<EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+				<EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.1"/>
+			</DoubleAnimationUsingKeyFrames>
+
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)">
+				<EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="180"/>
+			</DoubleAnimationUsingKeyFrames>
+
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(TranslateTransform.Y)">
+				<EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="50"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		
+		
+        <Storyboard x:Key="AtaqueFlojoStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Boca"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="2.0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Boca"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="30"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="AtaqueFuerteStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="2.0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="2.0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="DefensaStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+                                       Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="DescansoStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.95"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OjoIzquiero"
+          Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OjoDerecho"
+          Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Boca"
+          Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="IdleAnimation" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="HojasAgrupado"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)">
+                <LinearDoubleKeyFrame Value="0" KeyTime="0:0:0"/>
+                <LinearDoubleKeyFrame Value="2" KeyTime="0:0:1"/>
+                <LinearDoubleKeyFrame Value="-2" KeyTime="0:0:2"/>
+                <LinearDoubleKeyFrame Value="0" KeyTime="0:0:3"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="CuerpoRedondo"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <LinearDoubleKeyFrame Value="1" KeyTime="0:0:0"/>
+                <LinearDoubleKeyFrame Value="1.02" KeyTime="0:0:1.5"/>
+                <LinearDoubleKeyFrame Value="1" KeyTime="0:0:3"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OjoIzquiero"
+                                       Storyboard.TargetProperty="Opacity">
+                <DiscreteDoubleKeyFrame Value="1" KeyTime="0:0:0"/>
+                <DiscreteDoubleKeyFrame Value="0" KeyTime="0:0:2.2"/>
+                <DiscreteDoubleKeyFrame Value="1" KeyTime="0:0:2.3"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OjoDerecho"
+                                       Storyboard.TargetProperty="Opacity">
+                <DiscreteDoubleKeyFrame Value="1" KeyTime="0:0:0"/>
+                <DiscreteDoubleKeyFrame Value="0" KeyTime="0:0:2.2"/>
+                <DiscreteDoubleKeyFrame Value="1" KeyTime="0:0:2.3"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+       
+        <Storyboard x:Key="CansadoStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OjoIzquiero"
+        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OjoDerecho"
+        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Boca"
+        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+        Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="HeridoSeveroStoryboard2">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="CuerpoRedondo"
+        Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <DiscreteColorKeyFrame KeyTime="0:0:0" Value="#FF59829B"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:0.2" Value="Red"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:2" Value="Red"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:2.2" Value="#FF59829B"/>
+            </ColorAnimationUsingKeyFrames>
+
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="PataDerecha"
+        Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <DiscreteColorKeyFrame KeyTime="0:0:0" Value="#FF59829B"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:0.2" Value="Red"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:2" Value="Red"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:2.2" Value="#FF59829B"/>
+            </ColorAnimationUsingKeyFrames>
+
+            <ColorAnimationUsingKeyFrames Storyboard.TargetName="PataIzquierda"
+        Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                <DiscreteColorKeyFrame KeyTime="0:0:0" Value="#FF59829B"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:0.2" Value="Red"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:2" Value="Red"/>
+                <DiscreteColorKeyFrame KeyTime="0:0:2.2" Value="#FF59829B"/>
+            </ColorAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="HojasAgrupado"
+        Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="15"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SinPatasNiHojas"
+        Storyboard.TargetProperty="Opacity">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:0.1" Value="0.7"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:0.3" Value="0.7"/>
+                <DiscreteDoubleKeyFrame KeyTime="0:0:0.4" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="TransformacionBlancoStoryboard">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Boca" Storyboard.TargetProperty="Opacity">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PataDerecha" Storyboard.TargetProperty="Opacity">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PataIzquierda" Storyboard.TargetProperty="Opacity">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OjoIzquiero" Storyboard.TargetProperty="Opacity">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="OjoDerecho" Storyboard.TargetProperty="Opacity">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="HojasAgrupado" Storyboard.TargetProperty="Opacity">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="CuerpoRedondo"
+                                        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.5"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="CuerpoRedondo"
+                                        Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.5"/>
+                </DoubleAnimationUsingKeyFrames>
+
+                <ColorAnimationUsingKeyFrames Storyboard.TargetName="CuerpoRedondo"
+                                         Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+                    <DiscreteColorKeyFrame KeyTime="0:0:0" Value="#FF59829B"/>
+                    <DiscreteColorKeyFrame KeyTime="0:0:1" Value="White"/>
+                </ColorAnimationUsingKeyFrames>
+            </Storyboard>
+
+
+
+        <Storyboard x:Key="EscudoStoryboard">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="EscudoCanvas"
+                                       Storyboard.TargetProperty="Opacity">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="EscudoCanvas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="EscudoCanvas"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Image x:Name="imFondo"
+       Source="/Assets/bosque.png"
+       Stretch="Uniform"  HorizontalAlignment="Stretch"
+       VerticalAlignment="Stretch"/>
+
+        <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="355,248,0,0">
+            <Canvas Width="500" Height="400">
+
+                <Canvas x:Name="SinPatasNiHojas" Width="192" Height="160">
+                    <Canvas.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1" CenterX="96" CenterY="80"/>
+                            <RotateTransform Angle="0" CenterX="96" CenterY="80"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </Canvas.RenderTransform>
+                    <Path x:Name="CuerpoRedondo" Height="160" Stroke="Black" Stretch="Fill" Width="192"
+                            Fill="#FF59829B">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="96" CenterY="80"/>
+                                <RotateTransform Angle="0" CenterX="96" CenterY="80"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathGeometry.Figures>
+                                    <PathFigure StartPoint="367.73333,178.44">
+                                        <PolyLineSegment Points="349.9,180.51334 331.04288,187.22403 311.44158,199.45579 299.03107,214.94846 290.03434,231.47685 283.57581,256.16109 285.56558,279.63283 294.438,301.73217 302.78851,312.84699 314.27047,326.48022 326.79624,335.0955 341.93155,341.91722 359.15449,349.78342 376.37742,354.01879 394.4493,355.58197 412.73199,356.03504 423.33193,353.51073 442.45475,344.57513 454.50875,330.27817 463.72286,313.00268 469.89095,290.96153 470.70813,265.94186 465.84204,248.66636 461.13923,237.94365 454.86883,226.62522 444.94069,222.45527 434.49002,215.9025 424.03935,205.77549 410.97601,195.05277 398.43521,187.90429 384.3268,183.13864" />
+                                    </PathFigure>
+                                </PathGeometry.Figures>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:Name="Boca" Height="37" Stroke="Black" Stretch="Fill" Width="26"
+                            Canvas.Left="61" Canvas.Top="62" Fill="#FFD7AEBC">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1" ScaleY="1" CenterX="13" CenterY="18.5"/>
+                                <RotateTransform Angle="0" CenterX="13" CenterY="18.5"/>
+                                <TranslateTransform X="0" Y="0"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathGeometry.Figures>
+                                    <PathFigure StartPoint="348.86667,235.10667">
+                                        <PolyLineSegment Points="345.83334,243.78001 344.4515,255.02966 345.5185,264.33338 350.52235,268.67652 358.90009,267.31507 365.84343,260.35244 370.31991,252.14648 372.24045,245.18384 373.66849,239.96187 365.52669,238.71854 356.4889,237.47521" />
+                                    </PathFigure>
+                                </PathGeometry.Figures>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Path x:Name="PataDerecha" Height="72" Stroke="Black" Stretch="Fill" Width="55"
+                            Canvas.Left="21.6" Canvas.Top="142.2" Fill="#FF59829B">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathGeometry.Figures>
+                                    <PathFigure StartPoint="327.975,319.64">
+                                        <PolyLineSegment Points="318.55,326.58 309.62,337.72 303.27,353.28 302.83,367.26 304.38,379.74 308.57,385.97 315.69,390.48 325.95,392.34 336.11,387.14 342.43,381.09 349.8,372.39 355.73,361.84 358.32,351.73 359.68,342.31 358.73,332.48 358.1,330.02 350.52,327.36 343.57,325.31 335.78,322.65" />
+                                    </PathFigure>
+                                </PathGeometry.Figures>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Ellipse x:Name="OjoIzquiero" Height="15" Width="12" Stroke="Black"
+                              Canvas.Left="44" Canvas.Top="38" Fill="#FFEF9891">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="21.263"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                    <Ellipse x:Name="OjoDerecho" Height="17" Width="11" Stroke="Black"
+                              Canvas.Left="109" Canvas.Top="53" Fill="#FFEF9891">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="14.707"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                    <Path x:Name="PataIzquierda" Height="78" Stroke="Black" Stretch="Fill" Width="56"
+                            Canvas.Left="90.4" Canvas.Top="156.4" Fill="#FF59829B">
+                        <Path.Data>
+                            <PathGeometry>
+                                <PathGeometry.Figures>
+                                    <PathFigure StartPoint="388.6,338.24">
+                                        <PolyLineSegment Points="383.5,344.37 378.09,353.73 374.41,364.82 372.07,378.82 373.22,391.29 379.17,404.49 387.11,410.34 394.38,412.92 401.13,412.66 409.23,409.63 415.37,405.19 421.58,397.52 429.01,387.13 433.72,374.46 436.34,362.35 436.34,352.86 433.59,343.98 430.78,338.93 427.98,335.3 420.5,337.2 408.12,338.41 398.3,338.41" />
+                                    </PathFigure>
+                                </PathGeometry.Figures>
+                            </PathGeometry>
+                        </Path.Data>
+                    </Path>
+                    <Canvas x:Name="HojasAgrupado" Width="341" Height="232" Canvas.Left="-75" Canvas.Top="-163">
+                        <Canvas.RenderTransform>
+                            <RotateTransform Angle="0" CenterX="170" CenterY="100"/>
+                        </Canvas.RenderTransform>
+                        <Path x:Name="Hojas1" Height="232" Stroke="Black" Stretch="Fill" Width="341" Fill="#FF549842" Canvas.Left="87.286" Canvas.Top="10" UseLayoutRounding="False">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathGeometry.Figures>
+                                        <PathFigure StartPoint="324.36665,31.113333">
+                                            <PolyLineSegment Points="319.15752,49.528791 315.47911,69.844146 310.85383,93.140869 311.86329,119.59954 322.03279,142.42093 335.19331,161.38619 349.02255,169.66071 367.6707,179.70633 380.01746,183.3731 397.32666,188.38366 409.3307,191.5674 420.96555,198.74499 432.77621,206.39918 444.78702,213.49484 461.08404,220.52322 477.30456,228.02202 495.18261,235.46757 518.34188,241.23143 548.30022,246.85165 575.61934,246.38592 600.09007,238.82622 620.94285,225.86673 636.75778,215.60713 651.73718,206.12375 668.13665,197.78783 683.00518,190.76811 660.34774,181.58847 646.33733,176.72866 631.15939,171.32887 623.57043,168.089 638.1646,161.60925 655.6776,155.1295 670.27177,149.18974 680.19581,144.32993 663.26657,137.58019 644.00227,132.1804 623.57043,128.94053 600.21975,124.6207 587.96065,123.00076 576.86908,121.92081 585.04181,108.96132 593.79832,97.621761 603.72235,108.42134 618.90029,121.38083 619.44757,90.838277 617.73276,74.942651 612.47886,61.443181 597.30092,60.363223 564.60997,59.991988 541.84307,63.603096 511.48719,70.622821 491.05535,76.562588 469.45598,84.122291 471.20728,60.363223 471.79104,49.563647 474.12611,29.584431 460.26165,34.174251 439.82981,46.053785 425.8194,56.853361 411.809,68.192916 405.97133,74.672662 389.04209,90.872026 380.28559,72.512747 370.36155,60.633213 359.85375,47.673721 348.17841,33.634272 341.17321,23.914654"/>
+                                        </PathFigure>
+                                    </PathGeometry.Figures>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <Path x:Name="Hojas2" Height="137" Stroke="Black" Stretch="Fill" Width="207" Fill="#FF549842" Canvas.Left="69" Canvas.Top="45.94" Opacity="0.8">
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathGeometry.Figures>
+                                        <PathFigure StartPoint="451.80922,86.862156">
+                                            <PolyLineSegment Points="442.27795,92.187117 431.56301,99.553975 419.93835,107.7203 411.58218,116.01946 403.7606,125.7534 398.9283,133.96505 394.70831,142.72075 390.65714,153.30413 388.27139,163.24008 386.70899,172.78488 386.18462,177.55813 394.52639,179.76354 403.81847,184.34311 410.15398,186.74291 416.06712,189.94288 429.1605,188.5967 443.94336,185.82515 460.41568,183.44953 472.66433,178.69829 484.79259,173.15517 497.62224,168.008 508.34149,162.06895 520.76962,155.33803 533.16843,148.6071 541.31073,143.85586 551.7817,137.2192 560.62739,128.8342 568.16137,119.60081 573.17728,111.38906 577.50878,105.05408 582.26547,99.115027 585.7631,92.384105 592.87576,82.089753 596.79756,73.421922 601.76794,63.174625 604.34492,58.193041 585.38826,56.095529 567.03174,55.832754 551.49929,57.410519 535.96684,59.777168 520.43439,63.721584 504.33713,67.403038 487.11024,72.136337 473.27224,77.395558"/>
+                                        </PathFigure>
+                                    </PathGeometry.Figures>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                    </Canvas>
+                </Canvas>
+                <Canvas x:Name="EscudoCanvas" IsHitTestVisible="False" Opacity="0">
+                    <Canvas.RenderTransform>
+                        <ScaleTransform ScaleX="1" ScaleY="1" CenterX="110" CenterY="110"/>
+                    </Canvas.RenderTransform>
+                    <Ellipse x:Name="Escudo"
+                   Width="300" Height="300"
+                   Stroke="Cyan" StrokeThickness="5"
+                   Fill="Transparent"
+                   Canvas.Left="-54" Canvas.Top="-54"/>
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="Assets/corazon1.png"
+                    Grid.Row="0" Grid.Column="0"
+                    Width="40" Height="40"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+            <Image Source="Assets/energia1.png"
+                    Grid.Row="1" Grid.Column="0"
+                    Width="40" Height="40"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+            <Image x:Name="imgPotionRed"
+                    Source="Assets/red-potion1.png"
+                    Grid.Row="0" Grid.Column="2"
+                    Width="40" Height="40"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    PointerPressed="UsePotionRed"/>
+            <Image x:Name="imgPotionYellow"
+                    Source="Assets/yellow-potion1.png"
+                    Grid.Row="1" Grid.Column="2"
+                    Width="40" Height="40"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    PointerPressed="UsePotionYellow"/>
+            <ProgressBar x:Name="pbHealth"
+                          Grid.Row="0" Grid.Column="1"
+                          Height="30" Margin="5"
+                          Minimum="0" Maximum="100" Value="80"
+                          Foreground="Red" Background="Pink"
+                          VerticalAlignment="Center"
+                          ValueChanged="pbHealth_ValueChanged"/>
+            <ProgressBar x:Name="pbEnergy"
+                          Grid.Row="1" Grid.Column="1"
+                          Height="30" Margin="5"
+                          Minimum="0" Maximum="100" Value="50"
+                          Foreground="Yellow" Background="LightYellow"
+                          VerticalAlignment="Center"
+                          ValueChanged="pbEnergy_ValueChanged"/>
+            <TextBlock x:Name="pokemonNombre"
+                        Text="Oddish"
+                        Grid.Row="2" Grid.Column="1"
+                        FontSize="60"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Margin="0,20,0,20"/>
+        </Grid>
+    </Grid>
+</UserControl>
