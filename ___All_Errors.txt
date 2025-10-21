@@ -1,0 +1,15 @@
+CorrelationId: 8f8eb695-8588-46ff-95aa-4338a2b9fa22
+UTC DateTime: 10/20/2025 18:12:06
+
+The following files/folders have not been downloaded
+0. IPOkemonApp/obj/x64/Debug/net9.0-windows10.0.26100.0/win-x64/App.g.cs
+1. IPOkemonApp/obj/x86/Debug/net9.0-windows10.0.26100.0/win-x86/excluded.layout.resfiles
+2. IPOkemonApp/obj/x86/Debug/net9.0-windows10.0.26100.0/win-x86/excluded.layout.resfiles.intermediate
+3. IPOkemonApp/obj/x86/Debug/net9.0-windows10.0.26100.0/win-x86/IPOkemon.9C847418.Up2Date
+4. IPOkemonApp/obj/x86/Debug/net9.0-windows10.0.26100.0/win-x86/IPOkemonApp.csproj.BuildWithSkipAnalyzers
+5. IPOkemonApp/obj/x86/Debug/net9.0-windows10.0.26100.0/win-x86/pri.resfiles
+6. IPOkemonApp/obj/x86/Debug/net9.0-windows10.0.26100.0/win-x86/pri.resfiles.intermediate
+7. IPOkemonApp/obj/x86/Debug/net9.0-windows10.0.26100.0/win-x86/resources.resfiles
+8. IPOkemonApp/obj/x86/Debug/net9.0-windows10.0.26100.0/win-x86/resources.resfiles.intermediate
+9. IPOkemonApp/RepoPokemon2025/AssetsGardevoirAPM/SplashScreen.png
+10. IPOkemonApp/RepoPokemon2025/AssetsRioluPATF/niebla.jpg
