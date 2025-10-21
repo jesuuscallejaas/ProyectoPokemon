@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "IPOkemonApp": {
+      "commandName": "MsixPackage"
+    }
+  }
+}
